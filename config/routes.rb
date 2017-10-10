@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   resources :portfolios
-  get 'pages/home'
+   
 
-  get 'pages/about'
+  get 'about', to: 'pages#about'
 
-  get 'pages/contact'
+  get 'contact', to: 'pages#contact'
+  
+  root to: 'pages#home'
 
   resources :blogs
   # The priority is based upon order of creation: first created -> highest priority.
