@@ -5,11 +5,15 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+3.times do |topic|
+    Topic.create!(title: "Topic #{topic}")
+end
 
 10.times do |blog|
     Blog.create!(
         title: "My blog post #{blog}",
-        body: "Body"
+        body: "Body",
+        topic_id: Topic.last.id
         )
 end
 
@@ -19,10 +23,20 @@ end
         percent_utilized: 15)
     end
     
-9.times do |portfolio_item|
+8.times do |portfolio_item|
    Portfolio.create!(
        title: "Portfolio title: #{portfolio_item}",
-       subtitle: "My great service",
+       subtitle: "Ruby on Rails",
+       body: "Body",
+       main_image: "http://placehold.it/600x400" ,
+       thumb_image:  "http://placehold.it/300x200" 
+    )         
+end
+
+1.times do |portfolio_item|
+   Portfolio.create!(
+       title: "Portfolio title: #{portfolio_item}",
+       subtitle: "Angular",
        body: "Body",
        main_image: "http://placehold.it/600x400" ,
        thumb_image:  "http://placehold.it/300x200" 
