@@ -42,3 +42,7 @@ end
        thumb_image:  "http://placehold.it/300x200" 
     )         
 end
+
+3.times do |technology|
+   Portfolio.last.technologies.create!(name: "Tech #{technology}", portfolio_id: Portfolio.last.id) 
+end
