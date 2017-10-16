@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Workspace</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -10,13 +10,10 @@
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-  
-  <%= render "shared/nav" %>
-  
+   
   <%= login_helper %>
   <%= yield %>
-  
+  <%= render "shared/nav" %>
   <%= source_helper %>
-
 </body>
 </html>
